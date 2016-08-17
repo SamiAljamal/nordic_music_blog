@@ -1,8 +1,8 @@
 <div class="post">
   <h2>{{blogpost.title}}</h2>
-  <!-- <div class="image"> -->
+  {{#link-to 'blogpost' blogpost.id}}
     <img src={{blogpost.image}}/>
-  <!-- </div> -->
+  {{/link-to}}
   <p>{{blogpost.introduction}}</p>
   <p>{{blogpost.date}}</p>
 </div>
