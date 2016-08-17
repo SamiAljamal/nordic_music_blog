@@ -1,14 +1,39 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: url("https://hd.unsplash.com/35/hKViPxgDRGuiGns6wv5S_IMG_5317.jpeg");
+  background: #c3cdc9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  height: 50em;
+  background: url("https://hd.unsplash.com/photo-1459233313842-cd392ee2c388");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .wrap {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+.post {
+  width: 40em;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+}
+
+.post img {
+  width: 90%;
+  height: 25em;
   margin: 0 auto;
 }
 
