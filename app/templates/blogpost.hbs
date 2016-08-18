@@ -4,4 +4,11 @@
   <p>{{model.body}}</p>
 
   {{update-blogpost blogpost=model update="update"}}
+  {{new-comment saveComment="saveComment" blogpost=model}}
+  <h2>Comments</h2>
+  <ul>
+    {{#each model.comments as |comment|}}
+      {{comment-tile comment=comment}}
+    {{/each}}
+  </ul>
 </div>

@@ -13,6 +13,15 @@ export default Ember.Route.extend({
       });
       blogpost.save();
       this.transitionTo('index');
+    },
+    saveComment(params){
+      var newComment = this.store.createRecord('comment', params);
+      var blogpost = params.blogpost;
+      blogpost.get('comments').addObject(newComment);
+      newComment.save().then(function() {
+        return blogpost.save();
+      });
+      this.transitionTo('blogpost',params.blogpost);
     }
   }
 });
