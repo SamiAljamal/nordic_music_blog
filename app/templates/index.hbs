@@ -1,4 +1,14 @@
+<div class="modal-button">
+  <button class="btn btn-default btn-lg" {{action "toggleModal"}}>Add New Post</button>
+</div>
+
+{{#if isShowingModal}}
+{{#modal-dialog close="toggleModal"
+                targetAttachment="center"
+                translucentOverlay=true}}
 {{new-blogpost save="save"}}
+{{/modal-dialog}}
+{{/if}}
 <hr>
 {{#each model as |blogpost|}}
   {{blogpost-tile blogpost=blogpost}}

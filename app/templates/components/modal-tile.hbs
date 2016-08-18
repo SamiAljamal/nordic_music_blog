@@ -1,0 +1,9 @@
+{{#if enabled}}
+  <div {{action 'toggleModal'}} class="modal-fog">
+    <div class="modal-frame">
+      <div class="modal-body">
+      {{new-blogpost save="save"}}
+      </div>
+    </div>
+  </div>
+{{/if}}
