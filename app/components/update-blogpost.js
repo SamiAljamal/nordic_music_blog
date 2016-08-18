@@ -6,7 +6,7 @@ export default Ember.Component.extend({
     updateBlogpostForm() {
       this.set('updateBlogpostForm', true);
     },
-    update(article) {
+    update(blogpost) {
       var params = {
         title: this.get('title'),
         date: this.get('date'),
